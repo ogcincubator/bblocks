@@ -1,13 +1,12 @@
-# OGC Building Block template
+# OGC Building Blocks (Incubation)
 
-This template provides a working example of an OGC BuildingBlock.
+This repository creates a register of Building Blocks in the OGC Incubator organisation.
 
-[Examples of using this with typical applications of OGC standards](https://github.com/ogcincubator/bblocks-examples)
+These are building blocks being used or tested by multiple OGC stakeholders but not yet formally adopted as candidates for developement under a particular SWG (or another organisation)
 
-Please replace the contents of this README with information about your Building Block(s).
-
-# How to use this template
-
-[More information on design and usage](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md)
+bblock-prov-schema
+topo-feature
+bblocks-ogcapi-records
+geodcat-ogcapi-records
 
 
