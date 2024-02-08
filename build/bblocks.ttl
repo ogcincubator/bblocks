@@ -16,9 +16,9 @@
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks/master/build/generateddocs/json-full/bbr/template/my-building-block/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks/master/bblock/ogc.bbr.template.my-building-block" ],
-        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks/master/build/generateddocs/slate-build/bbr/template/my-building-block/" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks/master/bblock/ogc.bbr.template.my-building-block" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks/master/build/generateddocs/markdown/bbr/template/my-building-block/index.md" ] ;
     dct:hasVersion "0.1" ;
@@ -49,11 +49,11 @@ including [links](https://google.es).
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-02-08T21:38:36.712652"^^xsd:dateTime ;
-    prov:startedAtTime "2024-02-08T21:38:36.644679"^^xsd:dateTime ;
+    prov:endedAtTime "2024-02-08T21:45:06.406449"^^xsd:dateTime ;
+    prov:startedAtTime "2024-02-08T21:45:06.336623"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:388ba8f7e9999ccc5089ba06718fa753fcbf1ecd" ;
+            dct:hasVersion "git:6def9422731c149134cd8017ad2d3afdc1873ef3" ;
             rdfs:seeAlso <https://raw.githubusercontent.com/ogcincubator/bblocks/master/build/register.json> ],
         [ a prov:Entity ;
             dct:format "application/yaml" ;
