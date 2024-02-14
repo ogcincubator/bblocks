@@ -16,6 +16,6 @@ jobs:
     name: Validate and process
     uses: opengeospatial/bblocks-postprocess/.github/workflows/validate-and-process.yml@master
     with:
-      viewer_show_imported: true
+      viewer_show_imported: 1 # Show only local bblocks and first-level imports
     #   sparql_username: sparql
     #   sparql_password: Secr3T
