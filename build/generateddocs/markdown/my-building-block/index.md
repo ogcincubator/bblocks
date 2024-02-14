@@ -1,7 +1,7 @@
 
 # My Building Block (Schema)
 
-`ogc.bbr.template.my-building-block` *v0.1*
+`ogc.my-building-block` *v0.1*
 
 This Building Block serves as a template to create new ones
 
@@ -70,8 +70,8 @@ required:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml)
 
 
 # JSON-LD Context
@@ -90,7 +90,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld)
 
 ## Sources
 

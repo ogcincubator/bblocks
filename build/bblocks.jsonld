@@ -98,10 +98,9 @@
       }
     }
   ],
-  "name": "My OGC Building Blocks repository",
-  "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
-  "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2024-02-08T23:22:57.125554",
+  "name": "OGC Incubator Building Blocks repository",
+  "abstract": "Building Blocks for reuse, yet to be managed formally within a SWG charter scope.\n",
+  "modified": "2024-02-14T09:40:09.472339",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"14ee607a3043861f45036785e2601c2f26d55790",
@@ -115,16 +114,20 @@
   "viewerURL": "https://ogcincubator.github.io/bblocks/",
   "validationReport": "https://ogcincubator.github.io/bblocks/build/tests/report.html",
   "imports": [
-    "https://opengeospatial.github.io/bblocks/register.json"
+    "https://ogcincubator.github.io/bblock-prov-schema/build/register.json",
+    "https://ogcincubator.github.io/topo-feature/build/register.json",
+    "https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json",
+    "https://ogcincubator.github.io/bblocks-ogcapi-records/build/register.json",
+    "https://ogcincubator.github.io/prov-cwl/build/register.json"
   ],
   "@type": [
     "skos:ConceptScheme",
     "dcat:Catalog"
   ],
-  "skos:prefLabel": "My OGC Building Blocks repository",
+  "skos:prefLabel": "OGC Incubator Building Blocks repository",
   "hasConcepts": [
     {
-      "itemIdentifier": "ogc.bbr.template.my-building-block",
+      "itemIdentifier": "ogc.my-building-block",
       "$schema": "metaschema.yaml",
       "name": "My Building Block",
       "abstract": "This Building Block serves as a template to create new ones",
@@ -133,7 +136,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-02-08",
+      "dateOfLastChange": "2024-02-14",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -147,10 +150,10 @@
         "templates"
       ],
       "shaclRules": {},
-      "ldContext": "https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/context.jsonld",
+      "ldContext": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json"
       },
       "sourceLdContext": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/context.jsonld",
       "sourceSchema": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/schema.yaml",
@@ -159,19 +162,19 @@
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/bbr/template/my-building-block/index.md"
+          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/bbr/template/my-building-block/index.json"
+          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/slate-build/bbr/template/my-building-block/"
+          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/slate-build/my-building-block/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks/bblock/ogc.bbr.template.my-building-block"
+          "url": "https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block"
         }
       },
       "@type": [

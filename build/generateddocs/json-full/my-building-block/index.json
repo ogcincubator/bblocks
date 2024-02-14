@@ -1,7 +1,7 @@
 
 
 {
-  "itemIdentifier": "ogc.bbr.template.my-building-block",
+  "itemIdentifier": "ogc.my-building-block",
   "$schema": "metaschema.yaml",
   "name": "My Building Block",
   "abstract": "This Building Block serves as a template to create new ones",
@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2024-02-08",
+  "dateOfLastChange": "2024-02-14",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -24,10 +24,10 @@
     "templates"
   ],
   "shaclRules": {},
-  "ldContext": "https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/context.jsonld",
+  "ldContext": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld",
   "schema": {
-    "application/yaml": "https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.yaml",
-    "application/json": "https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json"
   },
   "sourceLdContext": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/context.jsonld",
   "sourceSchema": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/schema.yaml",

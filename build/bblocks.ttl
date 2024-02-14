@@ -7,28 +7,28 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://ogcincubator.github.io/ogc.bbr.template.my-building-block> a skos:Concept,
+<https://ogcincubator.github.io/ogc.my-building-block> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "My Building Block" ;
     dct:abstract "This Building Block serves as a template to create new ones" ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/bbr/template/my-building-block/index.json" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/slate-build/bbr/template/my-building-block/" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/bbr/template/my-building-block/index.md" ],
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/bblock/ogc.bbr.template.my-building-block" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/slate-build/my-building-block/" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-02-08"^^xsd:date ;
+    dct:modified "2024-02-14"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks/> ;
     dcat:keyword "templates" ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.json>,
-        <https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema.yaml> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json>,
+        <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks/_sources/my-building-block/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
@@ -37,27 +37,27 @@
 
 <https://ogcincubator.github.io/bblocks/> a skos:ConceptScheme,
         dcat:Catalog ;
-    rdfs:label "My OGC Building Blocks repository" ;
-    dct:abstract """This is an example text for the abstract. It should be short and to the point.
-A "Tell me more" link will appear if there is an additional description with a longer explanation.
+    rdfs:label "OGC Incubator Building Blocks repository" ;
+    dct:abstract """Building Blocks for reuse, yet to be managed formally within a SWG charter scope.
 """ ;
-    dct:description """The description can be longer. Both **the abstract** *and the description* support Markdown,
-including [links](https://google.es).
-""" ;
-    skos:prefLabel "My OGC Building Blocks repository" ;
+    skos:prefLabel "OGC Incubator Building Blocks repository" ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks/build/tests/report.html> ;
-    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+    bblocks:imports <https://ogcincubator.github.io/bblock-prov-schema/build/register.json>,
+        <https://ogcincubator.github.io/bblocks-ogcapi-records/build/register.json>,
+        <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
+        <https://ogcincubator.github.io/prov-cwl/build/register.json>,
+        <https://ogcincubator.github.io/topo-feature/build/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-02-08T23:22:57.577816"^^xsd:dateTime ;
-    prov:startedAtTime "2024-02-08T23:22:57.512373"^^xsd:dateTime ;
+    prov:endedAtTime "2024-02-14T09:40:11.100153"^^xsd:dateTime ;
+    prov:startedAtTime "2024-02-14T09:40:11.034912"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:c0a1ecf1c83433f4c18ce6adede38c39a3b13b85" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/bblocks/build/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:0cdf43a7ea9587fe6d6b3c2c8b1b184f00483d00" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/bblocks/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

@@ -1,5 +1,5 @@
 x-defs:
-  ogc.bbr.template.my-building-block:
+  ogc.my-building-block:
     description: Schema for my building block
     type: object
     properties:
@@ -15,6 +15,6 @@ x-defs:
     - a
     - b
     x-schema-version: https://json-schema.org/draft/2020-12/schema
-    x-schema-source: https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema-oas3.0.yaml
+    x-schema-source: https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema-oas3.0.yaml
 allOf:
-- $ref: https://ogcincubator.github.io/bblocks/build/annotated/bbr/template/my-building-block/schema-oas3.0.yaml#/x-defs/ogc.bbr.template.my-building-block
+- $ref: https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema-oas3.0.yaml#/x-defs/ogc.my-building-block
