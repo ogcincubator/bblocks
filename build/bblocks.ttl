@@ -13,14 +13,14 @@
     rdfs:label "My Building Block" ;
     dct:abstract "This Building Block serves as a template to create new ones" ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block" ],
-        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/slate-build/my-building-block/" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2024-02-14"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
@@ -49,14 +49,14 @@
         <https://ogcincubator.github.io/topo-feature/build/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-02-14T09:40:11.100153"^^xsd:dateTime ;
-    prov:startedAtTime "2024-02-14T09:40:11.034912"^^xsd:dateTime ;
+    prov:endedAtTime "2024-02-14T11:35:39.149039"^^xsd:dateTime ;
+    prov:startedAtTime "2024-02-14T11:35:39.083483"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/yaml" ;
             rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
         [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:0cdf43a7ea9587fe6d6b3c2c8b1b184f00483d00" ;
+            dct:hasVersion "git:f3dc9fe8dd7efbf7699ed7917bc17985eace7bc1" ;
             rdfs:seeAlso <https://ogcincubator.github.io/bblocks/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
