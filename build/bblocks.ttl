@@ -13,16 +13,16 @@
     rdfs:label "My Building Block" ;
     dct:abstract "This Building Block serves as a template to create new ones" ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/slate-build/my-building-block/" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/slate-build/my-building-block/" ],
-        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-02-14"^^xsd:date ;
+    dct:modified "2024-04-16"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks/> ;
     dcat:keyword "templates" ;
@@ -37,10 +37,10 @@
 
 <https://ogcincubator.github.io/bblocks/> a skos:ConceptScheme,
         dcat:Catalog ;
-    rdfs:label "OGC Incubator Building Blocks repository" ;
+    rdfs:label "Building Blocks - OGC Incubator Building Blocks repository" ;
     dct:abstract """Building Blocks for reuse, yet to be managed formally within a SWG charter scope.
 """ ;
-    skos:prefLabel "OGC Incubator Building Blocks repository" ;
+    skos:prefLabel "Building Blocks - OGC Incubator Building Blocks repository" ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks/build/tests/report.html> ;
     bblocks:imports <https://ogcincubator.github.io/bblock-prov-schema/build/register.json>,
         <https://ogcincubator.github.io/bblocks-ogcapi-records/build/register.json>,
@@ -49,18 +49,18 @@
         <https://ogcincubator.github.io/topo-feature/build/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-02-14T11:35:39.149039"^^xsd:dateTime ;
-    prov:startedAtTime "2024-02-14T11:35:39.083483"^^xsd:dateTime ;
+    prov:endedAtTime "2024-04-16T23:52:33.383466"^^xsd:dateTime ;
+    prov:startedAtTime "2024-04-16T23:52:33.325143"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:f3dc9fe8dd7efbf7699ed7917bc17985eace7bc1" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/bblocks/build/register.json> ] ;
+            dct:hasVersion "git:239cd9ec385b922c7a8b5a1dcd403a1e7eef3fb3" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/bblocks/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.35" ;
+            dct:hasVersion "0.3.44" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
 
