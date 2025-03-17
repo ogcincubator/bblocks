@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2024-04-16",
+  "dateOfLastChange": "2025-03-17",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -32,6 +32,7 @@
   "sourceSchema": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/",
+  "rdfData": [],
   "validationPassed": true,
   "description": "## Qui hastarum tectus Cithaeron iuvabat\n\nLorem markdownum vestigia sanguine rursus undis, suspenderat meo mox conlegerat\ntemperat sucos. Est graves dant sentire sanguinis flores respondent testari.\n\n> Videri vias quid Ausoniae sua flores ante, reminiscitur fuit est. Semel\n> [hectora](http://silvaque.org/) peregrinaeque rudem exercent in, Troiana si\n> Asida instabilesque somno sed.\n\n## Iam vota cui dilataque peterem\n\nTinxit lumina lacer liquidarum Aiax si mergitur sed fueris capitisque **et\ncadit** contigerant rectum [ferar](http://prosternit.com/quoque.html) temperat.\nMonet caput adsensere Ityn furentibus gelidos.",
   "examples": [
@@ -45,15 +46,18 @@
       "snippets": [
         {
           "language": "shell",
-          "code": "echo 'Hello, world!'"
+          "code": "echo 'Hello, world!'",
+          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_1.shell"
         },
         {
           "language": "python",
-          "code": "print('Hello, world!')"
+          "code": "print('Hello, world!')",
+          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_2.python"
         },
         {
           "language": "javascript",
-          "code": "console.log('Hello, world!')"
+          "code": "console.log('Hello, world!')",
+          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_3.javascript"
         }
       ]
     }
