@@ -12,11 +12,21 @@
       "prof": "http://www.w3.org/ns/dx/prof/",
       "dcat": "http://www.w3.org/ns/dcat#",
       "modspec": "http://www.opengis.net/def/ont/modspec/",
-      "itemIdentifier": "@id",
+      "void": "http://rdfs.org/ns/void#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "role": "http://www.w3.org/ns/dx/prof/role/",
+      "shacl": "https://www.w3.org/TR/shacl/",
+      "owl": "http://www.w3.org/2002/07/owl#",
       "baseURL": "@id",
       "name": "rdfs:label",
-      "abstract": "dct:abstract",
-      "description": "dct:description",
+      "abstract": {
+        "@id": "dct:abstract",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
+      "description": {
+        "@id": "dct:description",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
       "status": {
         "@id": "bblocks:status",
         "@type": "@id",
@@ -33,6 +43,10 @@
         "@id": "dct:modified",
         "@type": "xsd:date"
       },
+      "modified": {
+        "@id": "dct:modified",
+        "@type": "xsd:dateTime"
+      },
       "scope": {
         "@id": "bblocks:scope",
         "@type": "@id",
@@ -48,13 +62,11 @@
         }
       },
       "schema": {
-        "@id": "bblocks:hasSchema",
-        "@type": "@id",
-        "@container": "@index",
-        "@index": "dct:format"
+        "@id": "prof:hasResource",
+        "@type": "@id"
       },
       "ldContext": {
-        "@id": "bblocks:hasJsonLdContext",
+        "@id": "prof:hasResource",
         "@type": "@id"
       },
       "sourceLdContext": {
@@ -68,8 +80,14 @@
         "@index": "dct:identifier",
         "@context": {
           "mediatype": "dct:format",
-          "url": "rdfs:isDefinedBy"
+          "url": {
+            "@id": "rdfs:isDefinedBy",
+            "@type": "@id"
+          }
         }
+      },
+      "rdfs:isDefinedBy": {
+        "@type": "@id"
       },
       "hasConcepts": {
         "@reverse": "skos:inScheme"
@@ -78,39 +96,109 @@
         "@id": "bblocks:dependsOn",
         "@type": "@id"
       },
-      "profileOf": {
+      "isProfileOf": {
         "@id": "prof:isProfileOf",
         "@type": "@id"
       },
       "tags": "dcat:keyword",
-      "shaclRules": {
-        "@id": "bblocks:hasShaclRule",
-        "@type": "@id",
-        "@container": "@index",
-        "@index": "rdfs:seeAlso"
+      "shaclShapes": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
       },
       "validationReport": {
         "@id": "bblocks:hasValidationReport",
         "@type": "@id"
       },
+      "validationPassed": "bblocks:validationPassed",
       "imports": {
-        "@id": "bblocks:imports",
+        "@id": "owl:imports",
         "@type": "@id"
       },
       "conformanceClasses": {
         "@id": "modspec:class",
         "@type": "@id"
+      },
+      "requirementClasses": {
+        "@id": "modspec:requirementsClass",
+        "@type": "@id"
+      },
+      "sparqlEndpoint": {
+        "@id": "void:sparqlEndpoint",
+        "@type": "@id"
+      },
+      "viewerURL": {
+        "@id": "foaf:homepage",
+        "@type": "@id"
+      },
+      "dct:conformsTo": {
+        "@type": "@id"
+      },
+      "prof:hasRole": {
+        "@type": "@id"
+      },
+      "prof:hasArtifact": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
+        "@type": "@id"
+      },
+      "ontology": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "rdfData": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "links": {
+        "@id": "prof:hasResource",
+        "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld"
+      },
+      "concept": {
+        "@id": "skos:closeMatch",
+        "@type": "@id"
+      },
+      "rdfType": {
+        "@id": "rdfs:subClassOf",
+        "@type": "@id"
+      },
+      "resources": {
+        "@id": "prof:hasResource",
+        "@context": {
+          "role": {
+            "@id": "prof:hasRole",
+            "@type": "@id"
+          },
+          "constraints": "role:constraints",
+          "example": "role:example",
+          "guidance": "role:guidance",
+          "mapping": "role:mapping",
+          "schema": "role:schema",
+          "specification": "role:specification",
+          "validation": "role:validation",
+          "vocabulary": "role:vocabulary",
+          "data": "role:data",
+          "ref": {
+            "@id": "prof:hasArtifact",
+            "@type": "@id"
+          },
+          "format": "dct:format",
+          "conformsTo": {
+            "@id": "dct:conformsTo",
+            "@type": "@id"
+          }
+        }
       }
     }
   ],
   "name": "Building Blocks - OGC Incubator Building Blocks repository",
   "abstract": "Building Blocks for reuse, yet to be managed formally within a SWG charter scope.\n",
-  "modified": "2025-03-17T15:14:11.759952",
+  "modified": "2026-05-07T06:34:12.277335",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"e8df6b22cb38da4f600f3a0292c58fdef7734f97",
-      "shortCommitId": "\"e8df6b",
-      "date": "2025-03-17T08:34:25+00:00\""
+      "commitId": "\"e7a962626cb1b8416eac2178e4b7326d31314fcd",
+      "shortCommitId": "\"e7a962",
+      "date": "2026-04-28T10:25:15+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks",
@@ -118,17 +206,45 @@
   "baseURL": "https://ogcincubator.github.io/bblocks/",
   "viewerURL": "https://ogcincubator.github.io/bblocks/",
   "validationReport": "https://ogcincubator.github.io/bblocks/build/tests/report.html",
+  "validationReportJson": "https://ogcincubator.github.io/bblocks/build/tests/report.json",
   "imports": [
     "https://ogcincubator.github.io/bblock-prov-schema/build/register.json",
     "https://ogcincubator.github.io/topo-feature/build/register.json",
     "https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json",
     "https://ogcincubator.github.io/bblocks-ogcapi-records/build/register.json",
     "https://ogcincubator.github.io/prov-cwl/build/register.json",
-    "https://ogcincubator.github.io/bblocks-sta/build/register.json"
+    "https://ogcincubator.github.io/bblocks-sta/build/register.json",
+    "https://ogcincubator.github.io/bblocks-movingfeatures/build/register.json",
+    "https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json",
+    "https://ogcincubator.github.io/bblocks-wf4ever/build/register.json",
+    "https://ogcincubator.github.io/modelcontextprotocol/build/register.json",
+    "https://ogcincubator.github.io/bblocks-land-parcels/build/register.json"
+  ],
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
   ],
   "@type": [
     "skos:ConceptScheme",
-    "dcat:Catalog"
+    "dcat:Catalog",
+    "bblocks:BBlocksRegister"
   ],
   "skos:prefLabel": "Building Blocks - OGC Incubator Building Blocks repository",
   "hasConcepts": [
@@ -142,7 +258,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-03-17",
+      "dateOfLastChange": "2026-05-07",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -155,36 +271,67 @@
       "tags": [
         "templates"
       ],
-      "shaclRules": {},
-      "ldContext": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/resolvedProperties.json",
       "sourceFiles": "https://ogcincubator.github.io/bblocks/_sources/my-building-block/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block"
         }
       },
+      "@id": "bblocks://ogc.my-building-block",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "My Building Block",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://ogcincubator.github.io/bblocks/"
+      }
+    }
+  ],
+  "skos:hasTopConcept": [
+    {
+      "@id": "bblocks://ogc.my-building-block"
     }
   ]
 }

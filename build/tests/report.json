@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "result": true
+  },
+  "bblocks": {
+    "ogc.my-building-block": {
+      "title": "Validation report for ogc.my-building-block - My Building Block",
+      "bblockName": "My Building Block",
+      "bblockId": "ogc.my-building-block",
+      "generated": "2026-05-07T06:34:15.711926+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    }
+  }
+}

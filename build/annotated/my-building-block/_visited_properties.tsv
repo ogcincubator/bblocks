@@ -1,3 +1,3 @@
-path	@id
-/a	https://example.org/my-bb-model/a
-/b	https://example.org/my-bb-model/b
+path	@id	schema
+/a	https://example.org/my-bb-model/a	/github/workspace/build/annotated/my-building-block/schema.yaml
+/b	https://example.org/my-bb-model/b	/github/workspace/build/annotated/my-building-block/schema.yaml

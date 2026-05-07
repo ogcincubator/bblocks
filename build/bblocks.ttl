@@ -1,65 +1,110 @@
 @prefix bblocks: <https://www.opengis.net/def/bblocks/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://ogcincubator.github.io/ogc.my-building-block> a skos:Concept,
+<bblocks://ogc.my-building-block> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "My Building Block" ;
-    dct:abstract "This Building Block serves as a template to create new ones" ;
+    dct:abstract "This Building Block serves as a template to create new ones"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks/build/generateddocs/json-full/my-building-block/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks/bblock/ogc.my-building-block> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks/build/generateddocs/markdown/my-building-block/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-03-17"^^xsd:date ;
+    dct:modified "2026-05-07"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks/> ;
+    skos:prefLabel "My Building Block" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks/> ;
     dcat:keyword "templates" ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json>,
-        <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks/build/annotated/my-building-block/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks/_sources/my-building-block/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <https://example.com/sources/1> rdfs:label "Sample source document" .
 
+<https://ogcincubator.github.io/bblocks/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:Nc0bb1695a9614a0d9d96d5009b158257 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-05-07T06:34:15.839773"^^xsd:dateTime ;
+            prov:startedAtTime "2026-05-07T06:34:15.726505"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:07943a78248ed2ee0ac88efe68473e6511def720" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks/build/register.json> ] ;
+            prov:wasAssociatedWith _:Nc0bb1695a9614a0d9d96d5009b158257 ] .
+
 <https://ogcincubator.github.io/bblocks/> a skos:ConceptScheme,
-        dcat:Catalog ;
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
     rdfs:label "Building Blocks - OGC Incubator Building Blocks repository" ;
     dct:abstract """Building Blocks for reuse, yet to be managed formally within a SWG charter scope.
-""" ;
-    skos:prefLabel "Building Blocks - OGC Incubator Building Blocks repository" ;
-    bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks/build/tests/report.html> ;
-    bblocks:imports <https://ogcincubator.github.io/bblock-prov-schema/build/register.json>,
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2026-05-07T06:34:12.277335"^^xsd:dateTime ;
+    owl:imports <https://ogcincubator.github.io/bblock-prov-schema/build/register.json>,
+        <https://ogcincubator.github.io/bblocks-cc-profiles/build/register.json>,
+        <https://ogcincubator.github.io/bblocks-land-parcels/build/register.json>,
+        <https://ogcincubator.github.io/bblocks-movingfeatures/build/register.json>,
         <https://ogcincubator.github.io/bblocks-ogcapi-records/build/register.json>,
         <https://ogcincubator.github.io/bblocks-sta/build/register.json>,
+        <https://ogcincubator.github.io/bblocks-wf4ever/build/register.json>,
         <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
+        <https://ogcincubator.github.io/modelcontextprotocol/build/register.json>,
         <https://ogcincubator.github.io/prov-cwl/build/register.json>,
-        <https://ogcincubator.github.io/topo-feature/build/register.json> .
+        <https://ogcincubator.github.io/topo-feature/build/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.my-building-block> ;
+    skos:prefLabel "Building Blocks - OGC Incubator Building Blocks repository" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcincubator.github.io/bblocks/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcincubator.github.io/bblocks/build/bblocks.jsonld> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcincubator.github.io/bblocks/build/register.json> ] ;
+    foaf:homepage <https://ogcincubator.github.io/bblocks/> ;
+    bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks/build/tests/report.html> .
 
-[] a prov:Activity ;
-    prov:endedAtTime "2025-03-17T15:14:13.881186"^^xsd:dateTime ;
-    prov:startedAtTime "2025-03-17T15:14:13.815119"^^xsd:dateTime ;
-    prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:1701388515a16df38bc5ba0e498e9208b97d8e00" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/bblocks/build/register.json> ],
-        [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-    prov:wasAssociatedWith [ a prov:Agent,
-                schema:SoftwareApplication ;
-            rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.57" ;
-            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
+_:Nc0bb1695a9614a0d9d96d5009b158257 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.28" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

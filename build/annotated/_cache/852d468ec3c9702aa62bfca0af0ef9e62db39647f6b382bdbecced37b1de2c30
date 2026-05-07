@@ -1,0 +1,116 @@
+{
+  "name": "Model Context Protocol (MCP) Building Blocks",
+  "abstract": "BuildingBlock descriptions of the the elements of the\n[Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) \n",
+  "modified": "2025-09-30T10:27:15.227224",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
+      "shortCommitId": "\"cbdf07",
+      "date": "2025-09-30T10:25:21+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/ogcincubator/modelcontextprotocol",
+  "gitHubRepository": "https://github.com/ogcincubator/modelcontextprotocol/blob/master/",
+  "baseURL": "https://ogcincubator.github.io/modelcontextprotocol/",
+  "viewerURL": "https://ogcincubator.github.io/modelcontextprotocol/",
+  "validationReport": "https://ogcincubator.github.io/modelcontextprotocol/build/tests/report.html",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "mcp.json-rpc",
+      "name": "JSON-RPC",
+      "highlighted": true,
+      "title": "JSON-RPC Ontology and JSON-LD",
+      "description": "Annotates the JSON-RPC schemas with a JSON-LD context and ontology",
+      "status": "under-development",
+      "version": "2.0.0",
+      "itemClass": "model",
+      "dependsOn": [],
+      "rules": [],
+      "dateTimeAddition": "2025-06-12T00:00:00Z",
+      "dateOfLastChange": "2025-09-29",
+      "shaclShapes": {},
+      "ldContext": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/json-rpc/context.jsonld",
+      "ontology": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/json-rpc/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/json-rpc/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/json-rpc/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/modelcontextprotocol/_sources/json-rpc/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/modelcontextprotocol/_sources/json-rpc/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/modelcontextprotocol/_sources/json-rpc/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/modelcontextprotocol/blob/master/build/tests/json-rpc/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/modelcontextprotocol/build/generateddocs/markdown/json-rpc/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/modelcontextprotocol/build/generateddocs/json-full/json-rpc/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/modelcontextprotocol/bblock/mcp.json-rpc"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "mcp.mcp",
+      "name": "MCP",
+      "highlighted": true,
+      "title": "Model Context Protocol",
+      "description": "Schema refactored to use a JSON-RPC buildingblock",
+      "status": "stable",
+      "version": "1.0.0",
+      "itemClass": "schema",
+      "dependsOn": [
+        "mcp.json-rpc"
+      ],
+      "sources": [
+        {
+          "title": "Model Context Protocol",
+          "link": "https://modelcontextprotocol.io/specification/2025-06-18"
+        },
+        {
+          "title": "Model Context Protocol schema",
+          "link": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/refs/heads/main/schema/2025-06-18/schema.json"
+        }
+      ],
+      "rules": [],
+      "dateTimeAddition": "2025-06-12T00:00:00Z",
+      "dateOfLastChange": "2025-09-29",
+      "shaclShapes": {},
+      "ldContext": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/mcp/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/mcp/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/mcp/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/modelcontextprotocol/_sources/mcp/schema.json",
+      "sourceLdContext": "https://ogcincubator.github.io/modelcontextprotocol/_sources/mcp/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/modelcontextprotocol/_sources/mcp/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/modelcontextprotocol/blob/master/build/tests/mcp/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/modelcontextprotocol/build/generateddocs/markdown/mcp/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/modelcontextprotocol/build/generateddocs/json-full/mcp/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/modelcontextprotocol/bblock/mcp.mcp"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://ogcincubator.github.io/modelcontextprotocol/build/annotated/_cache"
+}
