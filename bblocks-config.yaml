@@ -13,17 +13,17 @@ identifier-prefix: ogc.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
-  - https://ogcincubator.github.io/bblock-prov-schema
-  - https://ogcincubator.github.io/topo-feature
-  - https://ogcincubator.github.io/geodcat-ogcapi-records
-  - https://ogcincubator.github.io/bblocks-ogcapi-records
-  - https://ogcincubator.github.io/prov-cwl
-  - https://ogcincubator.github.io/bblocks-sta
-  - https://ogcincubator.github.io/bblocks-movingfeatures/
-  - https://ogcincubator.github.io/bblocks-cc-profiles
-  - https://ogcincubator.github.io/bblocks-wf4ever
-  - https://ogcincubator.github.io/modelcontextprotocol
-  - https://ogcincubator.github.io/bblocks-land-parcels
+  - '@ogc/prov-schema'
+  - '@ogc/topo-feature'
+  - '@ogc/geodcat-ogcapi-records'
+  - '@ogc/ogcapi-records'
+  - '@ogc/prov-cwl'
+  - '@ogc/sta'
+  - '@ogc/movingfeatures'
+  - '@ogc/cc-profiles'
+  - '@ogc/wf4ever'
+  - '@ogc/modelcontextprotocol'
+  - '@ogc/land-parcels'
 # SPARQL configuration (optional)
 #   Authentication can be set through the sparql_username and sparql_password GitHub Workflow inputs
 #   (see .github/workflow/process-bblocks.yml)
