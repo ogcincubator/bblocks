@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2026-05-07",
+  "dateOfLastChange": "2026-09-16",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -46,18 +46,21 @@
       "snippets": [
         {
           "language": "shell",
-          "code": "echo 'Hello, world!'",
-          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_1.shell"
+          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_1.shell",
+          "sizeBytes": 20,
+          "code": "echo 'Hello, world!'"
         },
         {
           "language": "python",
-          "code": "print('Hello, world!')",
-          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_2.python"
+          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_2.python",
+          "sizeBytes": 22,
+          "code": "print('Hello, world!')"
         },
         {
           "language": "javascript",
-          "code": "console.log('Hello, world!')",
-          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_3.javascript"
+          "url": "https://ogcincubator.github.io/bblocks/build/tests/my-building-block/example_2_3.javascript",
+          "sizeBytes": 28,
+          "code": "console.log('Hello, world!')"
         }
       ]
     }
